@@ -1,3 +1,14 @@
-/**
- * Created by Administrator on 2016/11/23.
- */
+module.exports={
+    entry:"./main.js",
+    output:{
+        path:__dirname,
+        filename:"buding.js"
+    },
+    devtool:"source-map",
+    module:{
+        loaders:[
+            {test:/\.css$/,loader:"style!css!"},
+            {test:/\.js$/,loader:"babel"}
+        ]
+    }
+}
